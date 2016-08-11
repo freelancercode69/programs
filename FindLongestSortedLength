@@ -1,0 +1,30 @@
+public class FindLongestSortedLength {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = { 8,5, 6, 7, 26, 24 ,25,30,56};
+		System.out.println("size of Longest sorted :"
+				+ findLongestSorted(arr));
+	
+	}
+
+	private static int findLongestSorted(int[] arr) {
+		// TODO Auto-generated method stub
+		
+		int maxCount = 0, count = 0;
+		int prev = arr[0];
+		for (int num : arr) {
+			if (prev <= num) {
+				count++;
+			} else {
+				count = 1;
+			}
+			if (count > maxCount)
+				maxCount = count;
+			prev = num;
+		}
+		return maxCount;
+		
+	}
+
+}
