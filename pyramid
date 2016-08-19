@@ -1,0 +1,47 @@
+import java.io.IOException;
+
+public class Pyramid {
+	/*
+	 * 1 
+	 *a a 
+	 2 2 2 
+	b b b b 
+   3 3 3 3 3
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		// author:
+		// reviewed by:suresh
+		int i = 0, j = 0, l;
+		char c = 'a';
+		char k = '1';
+
+		int n = 5;// number of Rows
+
+		for (i = 0; i < n; i++) {
+			for (j = n - i; j > 0; j--) {
+				// number of Spaces
+				System.out.print(" ");
+			}
+
+			for (l = 0; l <= i; l++)
+				// if row is even it will print number else character
+				if (i % 2 == 0) {
+					System.out.print(k + " ");
+
+				} else {
+					System.out.print(c + " ");
+
+				}
+
+			if (i % 2 == 0) {
+				k++;
+			} else {
+				c++;
+			}
+			System.out.print("\n");
+		}
+
+	}
+
+}
